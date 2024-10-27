@@ -1,5 +1,53 @@
 @import url('./variables.css');
 
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  src: url('/fonts/inter-latin-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  src: url('/fonts/inter-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  size-adjust: 100%;
+  ascent-override: 90%;
+  src: url('/fonts/inter-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  size-adjust: 100%;
+  src: url('/fonts/jetbrains-mono-latin-400.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  size-adjust: 100%;
+  src: url('/fonts/jetbrains-mono-latin-500.woff2') format('woff2');
+}
+
 /* Base reset */
 *,
 *::before,
@@ -21,9 +69,16 @@ html {
 body {
   font-family:
     Inter,
-    system-ui,
     -apple-system,
-    sans-serif;
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    'Helvetica Neue',
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
   line-height: 1.5;
   color: var(--primary);
   background: var(--bg);
@@ -70,28 +125,6 @@ button {
   }
 }
 
-/* Light source effect */
-.light-source {
-  position: fixed;
-  top: -50%;
-  right: -50%;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(
-    circle at top right,
-    rgb(255 255 255 / 10%) 0%,
-    rgb(255 255 255 / 0%) 60%
-  );
-  pointer-events: none;
-  z-index: -1;
-  opacity: 0;
-  transition: opacity var(--transition-normal);
-}
-
-[data-theme='light'] .light-source {
-  opacity: 1;
-}
-
 /* Core layout */
 .container {
   max-width: 75rem;
@@ -107,6 +140,14 @@ h4,
 h5,
 h6 {
   line-height: 1.2;
+}
+
+code,
+.monospace,
+.skill,
+.label {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    'Liberation Mono', 'Courier New', monospace;
 }
 
 /* Utilities */
@@ -132,9 +173,5 @@ h6 {
   .container {
     max-width: none;
     padding: 0;
-  }
-
-  .light-source {
-    display: none;
   }
 }

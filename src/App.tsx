@@ -55,7 +55,7 @@ export default function App() {
             <div className={styles.buttons}>
               <a
                 href="https://linkedin.com/in/theodore-chernin"
-                className={`${styles.button} ${styles.primary}`}
+                className={`${styles.button} ${styles.linkedin}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >

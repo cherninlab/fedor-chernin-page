@@ -123,8 +123,8 @@
   width: 16px;
 }
 
-.primary {
-  background: var(--accent);
+.linkedin {
+  background: #0a66c2;
   color: white;
 }
 
