@@ -12,7 +12,12 @@ export default defineConfig({
     react(),
     compression({
       algorithm: 'brotliCompress',
-      ext: 'br',
+      ext: '.br',
+      threshold: 1024,
+    }),
+    compression({
+      algorithm: 'gzip',
+      ext: '.gz',
     }),
     createHtmlPlugin({
       minify: true,
@@ -60,7 +65,8 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom'],
-          'style-vendor': ['@fontsource/inter', '@fontsource/jetbrains-mono'],
+          icons: ['@radix-ui/react-icons'],
+          fonts: ['@fontsource/inter', '@fontsource/jetbrains-mono'],
         },
       },
     },
