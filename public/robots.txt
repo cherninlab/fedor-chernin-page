@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location (uncomment and update with your domain when ready)
+# Sitemap: https://your-domain.com/sitemap.xml
+
+# Prevent access to CV file
+Disallow: /Chernin_F_CV_2024_10.pdf
