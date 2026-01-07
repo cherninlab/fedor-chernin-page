@@ -1,11 +1,11 @@
 {
-    "$schema": "https://unpkg.com/knip@latest/schema.json",
-    "entry": ["src/main.tsx", "vite.config.ts"],
-    "project": ["src/**/*.{ts,tsx}"],
-    "ignore": ["**/*.d.ts"],
-    "ignoreDependencies": [],
-    "rules": {
-      "exports": "error",
-      "types": "error"
-    }
-  }
+	"$schema": "https://unpkg.com/knip@latest/schema.json",
+	"entry": ["src/main.tsx", "vite.config.ts"],
+	"project": ["src/**/*.{ts,tsx}"],
+	"ignore": ["**/*.d.ts"],
+	"ignoreDependencies": [],
+	"rules": {
+		"exports": "error",
+		"types": "error"
+	}
+}

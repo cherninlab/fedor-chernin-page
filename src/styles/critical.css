@@ -1,135 +1,129 @@
-@import url('./variables.css');
+@import url("./variables.css");
 
 @font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  size-adjust: 100%;
-  ascent-override: 90%;
-  src: url('/fonts/inter-latin-400.woff2') format('woff2');
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	size-adjust: 100%;
+	ascent-override: 90%;
+	src: url("/fonts/inter-latin-400.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  size-adjust: 100%;
-  ascent-override: 90%;
-  src: url('/fonts/inter-latin-500.woff2') format('woff2');
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	size-adjust: 100%;
+	ascent-override: 90%;
+	src: url("/fonts/inter-latin-500.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  size-adjust: 100%;
-  ascent-override: 90%;
-  src: url('/fonts/inter-latin-600.woff2') format('woff2');
+	font-family: Inter;
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	size-adjust: 100%;
+	ascent-override: 90%;
+	src: url("/fonts/inter-latin-600.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  size-adjust: 100%;
-  src: url('/fonts/jetbrains-mono-latin-400.woff2') format('woff2');
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	size-adjust: 100%;
+	src: url("/fonts/jetbrains-mono-latin-400.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'JetBrains Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  size-adjust: 100%;
-  src: url('/fonts/jetbrains-mono-latin-500.woff2') format('woff2');
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	size-adjust: 100%;
+	src: url("/fonts/jetbrains-mono-latin-500.woff2") format("woff2");
 }
 
 /* Base reset */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
 
 /* Document */
 html {
-  -webkit-text-size-adjust: 100%;
-  text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizelegibility;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizelegibility;
+	background: var(--bg);
+	color-scheme: light dark;
 }
 
 body {
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  line-height: 1.5;
-  color: var(--primary);
-  background: var(--bg);
-  transition:
-    color var(--transition-normal),
-    background-color var(--transition-normal);
+	font-family:
+		Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	line-height: 1.5;
+	color: var(--primary);
+	background: var(--bg);
+	transition:
+		color var(--transition-normal),
+		background-color var(--transition-normal);
 }
 
 /* Interactive */
 a {
-  color: inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 button {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  font: inherit;
-  -webkit-tap-highlight-color: transparent;
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	-webkit-tap-highlight-color: transparent;
 }
 
 /* Focus */
 :focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 2px;
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
 }
 
 /* Selection */
 ::selection {
-  background: var(--accent);
-  color: white;
+	background: var(--accent);
+	color: white;
 }
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
 }
 
 /* Core layout */
 .container {
-  max-width: 75rem;
-  margin: 0 auto;
-  padding: 2rem;
+	max-width: 75rem;
+	margin: 0 auto;
+	padding: 2rem;
 }
 
 /* Typography */
@@ -139,39 +133,40 @@ h3,
 h4,
 h5,
 h6 {
-  line-height: 1.2;
+	line-height: 1.2;
 }
 
 code,
 .monospace,
 .skill,
 .label {
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-    'Liberation Mono', 'Courier New', monospace;
+	font-family:
+		"JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+		"Liberation Mono", "Courier New", monospace;
 }
 
 /* Utilities */
 .sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 /* Print */
 @media print {
-  body {
-    background: none;
-    color: black;
-  }
+	body {
+		background: none;
+		color: black;
+	}
 
-  .container {
-    max-width: none;
-    padding: 0;
-  }
+	.container {
+		max-width: none;
+		padding: 0;
+	}
 }
