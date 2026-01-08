@@ -38,7 +38,24 @@
 	padding: 2.5rem;
 }
 
-.label {
+.header {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.avatarImage {
+	--size: 48px;
+	width: var(--size);
+	height: var(--size);
+	border-radius: 50%;
+	overflow: hidden;
+	flex-shrink: 0;
+	position: relative;
+}
+
+.name {
 	align-items: center;
 	color: var(--secondary);
 	display: flex;
@@ -46,13 +63,6 @@
 	font-size: 0.875rem;
 	gap: 0.5rem;
 	letter-spacing: -0.02em;
-	margin-bottom: 1rem;
-}
-
-.labelIcon {
-	color: var(--accent);
-	height: 16px;
-	width: 16px;
 }
 
 .title {
@@ -181,6 +191,10 @@
 @media (width <= 768px) {
 	.container {
 		padding: 1rem;
+	}
+
+	.avatarImage {
+		--size: 40px;
 	}
 
 	.buttons {

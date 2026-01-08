@@ -49,11 +49,22 @@ export default function App() {
 			<main>
 				<div className={styles.card}>
 					<div className={styles.intro}>
-						<div className={styles.label}>
-							Fedor Chernin
-							<br />
-							Tech Lead & System Architect
+						<div className={styles.header}>
+							<img
+								src="/profile.jpg"
+								alt="Fedor Chernin"
+								className={styles.avatarImage}
+								width={48}
+								height={48}
+								loading="lazy"
+							/>
+							<div className={styles.name}>
+								Fedor Chernin
+								<br />
+								Tech Lead & System Architect
+							</div>
 						</div>
+
 						<h1 className={styles.title}>
 							Platform engineering for AI products
 						</h1>
