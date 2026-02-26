@@ -37,16 +37,15 @@ export default function App() {
 				<div className={styles.header}>
 					<img
 						src="/profile.jpg"
-						alt="Fedor Chernin"
+						alt="Theo Chernin"
 						className={styles.avatarImage}
 						width={48}
 						height={48}
 						loading="lazy"
 					/>
 					<div className={styles.name}>
-						Fedor Chernin
-						<br />
-						Tech Lead & System Architect
+						<span className={styles.personName}>Theo Chernin</span>
+						<span>Tech Lead & System Architect</span>
 					</div>
 				</div>
 				<div className={styles.card}>
